@@ -15,6 +15,8 @@ builder.Services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title =
 builder.Services.AddDbContext<ApplicationDbContext>(x =>
     x.UseSqlServer(builder.Configuration.GetConnectionString(nameof(ConnectionString.Learning))));
 
+builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

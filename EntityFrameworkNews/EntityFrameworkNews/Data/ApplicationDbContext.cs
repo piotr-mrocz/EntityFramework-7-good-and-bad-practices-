@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EntityFrameworkNews.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkNews.Data;
 
@@ -11,7 +12,7 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 
     #region DbSets
 
-
+    public DbSet<User> Users { get; set; }
 
     #endregion DbSets
 
