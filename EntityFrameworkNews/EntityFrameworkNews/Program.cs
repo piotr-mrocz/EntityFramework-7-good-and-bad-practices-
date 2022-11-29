@@ -25,7 +25,6 @@ app.UseSwaggerUI(c =>
 {
     // run automatically swagger when run project
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Learning Entity Framework API v1");
-    c.RoutePrefix = "";
 });
 app.UseSwagger(x => x.SerializeAsV2 = true);
 #endregion Swagger
