@@ -16,6 +16,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(x =>
     x.UseSqlServer(builder.Configuration.GetConnectionString(nameof(ConnectionString.Learning))));
 
 builder.Services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+builder.Services.AddScoped<DatabaseSeeder>();
 
 var app = builder.Build();
 
@@ -28,6 +29,11 @@ app.UseSwaggerUI(c =>
 });
 app.UseSwagger(x => x.SerializeAsV2 = true);
 #endregion Swagger
+
+var databaseSeeder = app.Services.CreateScope().ServiceProvider.GetService<DatabaseSeeder>();
+
+if (databaseSeeder is not null)
+    databaseSeeder.Seed();
 
 app.UseHttpsRedirection();
 

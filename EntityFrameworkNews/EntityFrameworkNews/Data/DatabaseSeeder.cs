@@ -22,6 +22,9 @@ public class DatabaseSeeder
 
         if (!_dbContext.Products.Any())
             AddSomeProducts();
+
+        if (!_dbContext.Orders.Any())
+            AddSomeOrders();
     }
 
     private void AddSomeUsers()
@@ -97,6 +100,35 @@ public class DatabaseSeeder
         }
 
         _dbContext.Products.AddRange(productList);
+        _dbContext.SaveChanges();
+    }
+
+    private void AddSomeOrders()
+    {
+        var idsUsers = _dbContext.Users.Select(x => x.Id).ToList();
+        var idsProducts = _dbContext.Products.Select(x => x.Id).ToList();
+
+        var ordersNumber = 10000;
+        var random = new Random();
+
+        var orderList = new List<Order>();
+
+        for (int number = 0; number < ordersNumber; number++)
+        {
+            var randomIdProduct = random.Next(idsProducts.Count);
+            var randomIdUser = random.Next(idsUsers.Count);
+
+            var idProduct = idsProducts.FirstOrDefault(x => x == randomIdProduct);
+            var idUser = idsUsers.FirstOrDefault(x => x == randomIdUser);
+
+            orderList.Add(new Order()
+            {
+                IdProduct = idProduct != default ? idProduct : idsProducts.FirstOrDefault(),
+                IdUser = idUser != default ? idUser : idsUsers.FirstOrDefault()
+            });
+        }
+
+        _dbContext.Orders.AddRange(orderList);
         _dbContext.SaveChanges();
     }
 }
