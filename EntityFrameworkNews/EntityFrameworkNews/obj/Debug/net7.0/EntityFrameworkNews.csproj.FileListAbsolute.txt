@@ -74,3 +74,6 @@ D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\EntityFrameworkNews\obj\Deb
 D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\EntityFrameworkNews\obj\Debug\net7.0\EntityFrameworkNews.pdb
 D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\EntityFrameworkNews\obj\Debug\net7.0\EntityFrameworkNews.genruntimeconfig.cache
 D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\EntityFrameworkNews\obj\Debug\net7.0\ref\EntityFrameworkNews.dll
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\EntityFrameworkNews\bin\Debug\net7.0\MediatR.dll
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\EntityFrameworkNews\bin\Debug\net7.0\MediatR.Contracts.dll
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\EntityFrameworkNews\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

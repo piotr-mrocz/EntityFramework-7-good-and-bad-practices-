@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "5MV1HNX6wnOLkUXK0JP1xsxQcW9WGL4VRxO4T0My+XcaCYhzRfkcOToDoFu0gJ9em/236bCfnl260opHRjaFyA==",
+  "dgSpecHash": "X31wg1oE+4ZfD8QHJ6xr/8mO7eAjyjmpOuq9z1jff2tZm+jYnO3SFAYlgsLldQLRILTCdvqnCiGgBOy9sdcERA==",
   "success": true,
   "projectFilePath": "D:\\Nauka\\Repos\\EntityFramework-7\\EntityFrameworkNews\\EntityFrameworkNews\\EntityFrameworkNews.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrocz\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mrocz\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\mrocz\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\mrocz\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\mrocz\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\mrocz\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\mrocz\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.0\\microsoft.aspnetcore.openapi.7.0.0.nupkg.sha512",
     "C:\\Users\\mrocz\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\mrocz\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
