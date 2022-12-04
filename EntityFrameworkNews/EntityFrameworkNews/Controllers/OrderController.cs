@@ -6,4 +6,5 @@ namespace EntityFrameworkNews.Controllers;
 [Route("api/[controller]/[action]")]
 public class OrderController : ControllerBase
 {
+
 }
