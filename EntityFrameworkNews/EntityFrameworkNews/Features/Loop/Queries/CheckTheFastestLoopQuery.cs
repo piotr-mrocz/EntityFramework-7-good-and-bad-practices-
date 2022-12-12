@@ -9,11 +9,11 @@ using System.Runtime.InteropServices;
 
 namespace EntityFrameworkNews.Features.Loop.Queries;
 
-public class CheckTheFastestLoopQuery : IRequest<List<string>>
+public sealed class CheckTheFastestLoopQuery : IRequest<List<string>>
 {
 }
 
-file class CheckTheFastestLoopHandler : IRequestHandler<CheckTheFastestLoopQuery, List<string>>
+file sealed class CheckTheFastestLoopHandler : IRequestHandler<CheckTheFastestLoopQuery, List<string>>
 {
     private readonly IApplicationDbContext _dbContet;
 

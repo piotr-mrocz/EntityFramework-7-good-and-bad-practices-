@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EntityFrameworkNews.Features.Order.Queries;
 
-public class GetAllOrdersOldWithoutRelationsQuery : IRequest<Response<List<OrderDto>>>
+public sealed class GetAllOrdersOldWithoutRelationsQuery : IRequest<Response<List<OrderDto>>>
 {
 }
 
-file class GetAllOrdersOldWithoutRelationsHandler : IRequestHandler<GetAllOrdersOldWithoutRelationsQuery, Response<List<OrderDto>>>
+file sealed class GetAllOrdersOldWithoutRelationsHandler : IRequestHandler<GetAllOrdersOldWithoutRelationsQuery, Response<List<OrderDto>>>
 {
     private readonly IApplicationDbContext _dbContet;
 
@@ -59,7 +59,7 @@ file class GetAllOrdersOldWithoutRelationsHandler : IRequestHandler<GetAllOrders
         return new Response<List<OrderDto>>()
         {
             Success = true,
-            Data = ordersListDto.Take(10).ToList(),
+            Data = ordersListDto.Take(1).ToList(),
             QueryTime = $"{queryTime.ToString("N2")} (w sekundach)"
         };
     }
