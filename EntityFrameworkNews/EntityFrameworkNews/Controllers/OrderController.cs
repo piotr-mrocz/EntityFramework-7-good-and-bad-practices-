@@ -1,4 +1,5 @@
-﻿using EntityFrameworkNews.Features.Order.Queries;
+﻿using EntityFrameworkNews.Features.Order.Commands;
+using EntityFrameworkNews.Features.Order.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,22 +18,45 @@ public class OrderController : ControllerBase
 
     #region Old bad version
 
-    [HttpPost]
-    public async Task<IActionResult> GetAllOrdersOldWithoutRelations(GetAllOrdersOldWithoutRelationsQuery request)
-        => Ok(await _mediator.Send(request));
+    #region Commands
 
-    [HttpPost]
+    [HttpDelete]
+    public async Task<IActionResult> DeleteOrderOld(DeleteOrderOldCommand request)
+      => Ok(await _mediator.Send(request));
+
+    #endregion Commands
+
+    #region Queries
+
+    [HttpGet]
+    public async Task<IActionResult> GetAllOrdersOldWithoutRelations(GetAllOrdersOldWithoutRelationsQuery request)
+       => Ok(await _mediator.Send(request));
+
+    [HttpGet]
     public async Task<IActionResult> GetAllOrdersOld(GetAllOrdersOldQuery request)
         => Ok(await _mediator.Send(request));
+
+    #endregion Queries
 
     #endregion Old bad version
 
     #region New better version
 
-    [HttpPost]
-    public async Task<IActionResult> GetAllOrdersNew(GetAllOrdersNewQuery request)
-        => Ok(await _mediator.Send(request));
+    #region Commands
 
+    [HttpDelete]
+    public async Task<IActionResult> DeleteOrderNew(DeleteOrderNewCommand request)
+    => Ok(await _mediator.Send(request));
+
+    #endregion Commands
+
+    #region Queries
+
+    [HttpGet]
+    public async Task<IActionResult> GetAllOrdersNew(GetAllOrdersNewQuery request)
+      => Ok(await _mediator.Send(request));
+
+    #endregion Queries
 
     #endregion New better version
 }
