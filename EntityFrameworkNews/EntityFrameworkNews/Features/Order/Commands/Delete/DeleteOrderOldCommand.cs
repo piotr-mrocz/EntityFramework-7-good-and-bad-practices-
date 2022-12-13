@@ -3,7 +3,7 @@ using EntityFrameworkNews.Models.Responses;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityFrameworkNews.Features.Order.Commands;
+namespace EntityFrameworkNews.Features.Order;
 
 public sealed class DeleteOrderOldCommand : IRequest<Response<string>>
 {
@@ -30,7 +30,7 @@ public sealed class DeleteOrderOldHandler : IRequestHandler<DeleteOrderOldComman
         {
             var endTimeError = DateTime.Now;
             var queryTimeError = $"{(endTimeError - startTime).TotalSeconds:N2} (w sekundach)";
-            
+
             return new Response<string>(false, "Nie odnaleziono wpisu w bazie danych!", queryTimeError);
         }
 
@@ -40,6 +40,6 @@ public sealed class DeleteOrderOldHandler : IRequestHandler<DeleteOrderOldComman
         var endTime = DateTime.Now;
         var queryTime = $"{(endTime - startTime).TotalSeconds:N2} (w sekundach)";
 
-        return new Response<string>(true, "", queryTime);
+        return new Response<string>(true, "Operacja zakończona pomyślnie", queryTime);
     }
 }

@@ -1,5 +1,4 @@
-﻿using EntityFrameworkNews.Features.Order.Commands;
-using EntityFrameworkNews.Features.Order.Queries;
+﻿using EntityFrameworkNews.Features.Order;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +23,10 @@ public class OrderController : ControllerBase
     public async Task<IActionResult> DeleteOrderOld(DeleteOrderOldCommand request)
       => Ok(await _mediator.Send(request));
 
+    [HttpPut]
+    public async Task<IActionResult> UpdateOrderOld(UpdateOrderOldCommand request)
+        => Ok(await _mediator.Send(request));
+
     #endregion Commands
 
     #region Queries
@@ -47,6 +50,10 @@ public class OrderController : ControllerBase
     [HttpDelete]
     public async Task<IActionResult> DeleteOrderNew(DeleteOrderNewCommand request)
     => Ok(await _mediator.Send(request));
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateOrderNew(UpdateOrderNewCommand request)
+        => Ok(await _mediator.Send(request));
 
     #endregion Commands
 

@@ -1,11 +1,10 @@
 ﻿using EntityFrameworkNews.Data;
 using EntityFrameworkNews.Models.Dtos;
-using EntityFrameworkNews.Models.Entities;
 using EntityFrameworkNews.Models.Responses;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityFrameworkNews.Features.Order.Queries;
+namespace EntityFrameworkNews.Features.Order;
 
 public sealed class GetAllOrdersNewQuery : IRequest<Response<List<OrderDto>>>
 {

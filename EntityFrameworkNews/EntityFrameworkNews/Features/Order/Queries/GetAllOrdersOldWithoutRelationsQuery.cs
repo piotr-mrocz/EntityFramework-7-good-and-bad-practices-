@@ -4,7 +4,7 @@ using EntityFrameworkNews.Models.Responses;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityFrameworkNews.Features.Order.Queries;
+namespace EntityFrameworkNews.Features.Order;
 
 public sealed class GetAllOrdersOldWithoutRelationsQuery : IRequest<Response<List<OrderDto>>>
 {

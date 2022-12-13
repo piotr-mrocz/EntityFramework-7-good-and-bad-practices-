@@ -3,7 +3,7 @@ using EntityFrameworkNews.Models.Responses;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntityFrameworkNews.Features.Order.Commands;
+namespace EntityFrameworkNews.Features.Order;
 
 public sealed class DeleteOrderNewCommand : IRequest<Response<string>>
 {
