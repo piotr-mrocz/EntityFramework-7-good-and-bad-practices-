@@ -28,12 +28,31 @@ public sealed class UpdateOrderOldHandler : IRequestHandler<UpdateOrderOldComman
         var order = await _dbContext.Orders
             .FirstOrDefaultAsync(x => x.Id == request.IdOrder, cancellationToken);
 
+        var users = await _dbContext.Users.ToListAsync(cancellationToken);
+        var products = await _dbContext.Products.ToListAsync(cancellationToken);
+
         if (order == null)
         {
             var endTimeError = DateTime.Now;
             var queryTimeError = $"{(endTimeError - startTime).TotalSeconds:N2} (w sekundach)";
 
             return new Response<string>(false, "Nie odnaleziono wpisu w bazie danych!", queryTimeError);
+        }
+
+        if (!users.Any(x => x.Id == request.IdUser))
+        {
+            var endTimeError = DateTime.Now;
+            var queryTimeError = $"{(endTimeError - startTime).TotalSeconds:N2} (w sekundach)";
+
+            return new Response<string>(false, "Nie odnaleziono usera w bazie danych!", queryTimeError);
+        }
+
+        if (!products.Any(x => x.Id == request.IdProduct))
+        {
+            var endTimeError = DateTime.Now;
+            var queryTimeError = $"{(endTimeError - startTime).TotalSeconds:N2} (w sekundach)";
+
+            return new Response<string>(false, "Nie odnaleziono produktu w bazie danych!", queryTimeError);
         }
 
         order.IdUser = request.IdUser;
