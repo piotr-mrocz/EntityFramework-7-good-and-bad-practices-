@@ -23,19 +23,28 @@ public class OrderController : ControllerBase
     public async Task<IActionResult> DeleteOrderOld(DeleteOrderOldCommand request)
       => Ok(await _mediator.Send(request));
 
+    [HttpDelete]
+    public async Task<IActionResult> DeleteAllOrderOld(DeleteAllOrdersOldCommand request)
+      => Ok(await _mediator.Send(request));
+
     [HttpPut]
     public async Task<IActionResult> UpdateOrderOld(UpdateOrderOldCommand request)
+        => Ok(await _mediator.Send(request));
+
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateAllOrdersOld(UpdateAllOrdersOldCommand request)
         => Ok(await _mediator.Send(request));
 
     #endregion Commands
 
     #region Queries
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetAllOrdersOldWithoutRelations(GetAllOrdersOldWithoutRelationsQuery request)
        => Ok(await _mediator.Send(request));
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetAllOrdersOld(GetAllOrdersOldQuery request)
         => Ok(await _mediator.Send(request));
 
@@ -51,15 +60,25 @@ public class OrderController : ControllerBase
     public async Task<IActionResult> DeleteOrderNew(DeleteOrderNewCommand request)
     => Ok(await _mediator.Send(request));
 
+    [HttpDelete]
+    public async Task<IActionResult> DeleteAllOrderNew(DeleteAllOrdersNewCommand request)
+     => Ok(await _mediator.Send(request));
+
     [HttpPut]
     public async Task<IActionResult> UpdateOrderNew(UpdateOrderNewCommand request)
+        => Ok(await _mediator.Send(request));
+
+
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateAllOrdersNew(UpdateAllOrdersNewCommand request)
         => Ok(await _mediator.Send(request));
 
     #endregion Commands
 
     #region Queries
 
-    [HttpGet]
+    [HttpPost]
     public async Task<IActionResult> GetAllOrdersNew(GetAllOrdersNewQuery request)
       => Ok(await _mediator.Send(request));
 
