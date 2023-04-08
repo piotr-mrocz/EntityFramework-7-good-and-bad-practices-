@@ -85,4 +85,16 @@ public class OrderController : ControllerBase
     #endregion Queries
 
     #endregion New better version
+
+    #region Single vs First
+
+    [HttpPost]
+    public async Task<IActionResult> RunSingleOrFirst(RunSingleOrFirstQuery request)
+      => Ok(await _mediator.Send(request));
+
+    [HttpPost]
+    public async Task<IActionResult> RunSingleOrFirstInList(RunSingleOrFirstInListQuery request)
+      => Ok(await _mediator.Send(request));
+
+    #endregion
 }
