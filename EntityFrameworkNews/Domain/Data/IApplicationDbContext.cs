@@ -6,6 +6,7 @@ namespace EntityFrameworkNews.Data;
 public interface IApplicationDbContext
 {
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
+    int SaveChanges();
 
     DbSet<User> Users { get; set; }
     DbSet<Product> Products { get; set; }

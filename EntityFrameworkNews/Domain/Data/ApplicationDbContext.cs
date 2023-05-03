@@ -5,10 +5,15 @@ namespace EntityFrameworkNews.Data;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
+    public ApplicationDbContext() : base() { }
+
     public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
     public async override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
        => await base.SaveChangesAsync(cancellationToken);
+
+    public override int SaveChanges()
+        => base.SaveChanges();
 
     #region DbSets
 

@@ -1,0 +1,14 @@
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\bin\Debug\net7.0\Domain.runtimeconfig.json
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\bin\Debug\net7.0\Domain.dll
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\bin\Debug\net7.0\Domain.pdb
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.dll
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.pdb
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\Domain.genruntimeconfig.cache
+D:\Nauka\Repos\EntityFramework-7\EntityFrameworkNews\Domain\obj\Debug\net7.0\ref\Domain.dll
