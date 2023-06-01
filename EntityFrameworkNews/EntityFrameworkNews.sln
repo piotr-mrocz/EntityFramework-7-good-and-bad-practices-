@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkNews", "Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstVsSingle", "FirstVsSingle\FirstVsSingle.csproj", "{229A0DD9-89B5-43D3-AC6C-210ED4C32D31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddVsAddRange", "AddVsAddRange\AddVsAddRange.csproj", "{3ED8899A-1B88-4D85-A708-A1BB42F6222F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddVsAddRange", "AddVsAddRange\AddVsAddRange.csproj", "{3ED8899A-1B88-4D85-A708-A1BB42F6222F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{8D8D0F55-CEED-46DE-A0EC-9816F5B86004}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{8D8D0F55-CEED-46DE-A0EC-9816F5B86004}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
